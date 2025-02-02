@@ -1,0 +1,10 @@
+PUT http://localhost:3004/api/games/67739a87c72e0cb2595cfa77
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaWRlbiIsImlkIjoiNjc3Mzk5MWQwY2YwN2M5MTVjMzJiOGE1IiwiaWF0IjoxNzM1NjI5Njg4LCJleHAiOjE3MzU2MzMyODh9.zJHxmI-oBKdkgbHIiN3BxMjp0F_lESCKIMgHYTlc_ng
+
+{
+  "name": "max payne",
+  "url": "www.asa.com",
+  "publishers": "heea",
+  "likes": 2
+}

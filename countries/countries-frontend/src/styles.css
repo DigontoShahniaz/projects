@@ -1,0 +1,57 @@
+/* styles.css */
+body {
+  background-color: #7a8086;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-input {
+  border: 3px solid;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgb(189, 189, 189);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100px;
+  margin-top: 10px;
+}

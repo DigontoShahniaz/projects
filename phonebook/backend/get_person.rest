@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "kuddos",
+  "number": "1111 1111 2111122"
+}

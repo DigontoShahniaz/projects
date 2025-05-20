@@ -21,8 +21,8 @@ const { useServer } = require('graphql-ws/lib/use/ws')
 const { PubSub } = require('graphql-subscriptions')
 const pubsub = new PubSub()
 
+
 const app = express();
-app.use(express.static("dist"));
 
 mongoose.set('strictQuery', false);
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -89,7 +89,7 @@ const typeDefs = `
       username: String!, 
       favoriteGenre: String!,
       password: String!
-    ): Token
+    ): User
 
     login(
       username: String!, 
@@ -194,14 +194,11 @@ const resolvers = {
     createUser: async (root, args) => {
       const saltRounds = 10;
       const passwordHash = await bcrypt.hash(args.password, saltRounds);
-    
+
       const user = new User({ ...args, password: passwordHash });
       try {
-        await user.save();
-        const token = jwt.sign({ username: user.username, id: user.id }, process.env.JWT_SECRET);
-        return { value: token };
+        return await user.save();
       } catch (error) {
-        console.log("Error creating user:", error); // Log the full error
         throw new GraphQLError('User creation failed', { error });
       }
     },

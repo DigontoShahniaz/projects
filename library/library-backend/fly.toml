@@ -1,15 +1,16 @@
-# fly.toml app configuration file generated for library-application on 2025-02-04T00:18:03+02:00
+# fly.toml app configuration file generated for libraryapp on 2025-05-20T16:05:28+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'library-application'
+app = 'libraryapp'
 primary_region = 'arn'
 
 [build]
 
 [env]
-  PORT="4000"
+  PORT = "4000"
+  
 
 [http_service]
   internal_port = 4000
